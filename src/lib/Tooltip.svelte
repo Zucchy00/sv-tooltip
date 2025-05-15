@@ -6,6 +6,7 @@
   export let left = false;
   export let active = false;
   export let color = "#0f172a";
+  export let container = ""
 
   let arrowTopGap = 0;
 
@@ -77,7 +78,7 @@
   };
 </script>
 
-<span class="tooltip-slot" use:tooltip>
+<span class={`tooltip-slot ${container}`} use:tooltip>
   <slot />
   <span class:tooltip={true} class:active {...$$restProps}>
     {#if tip}
